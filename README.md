@@ -5,7 +5,7 @@ Youtube videos in the gallery are ignored. Made to scrape the Maplestory Fandom 
 
 I did not bother to do much edgecase or error handling.
 
-#Usage
+# Usage
 `py "fandom image crawler.py" LINK`
 
 e.g. `py "fandom image crawler.py" https://maplestory.fandom.com/wiki/Category:NPCs`
