@@ -24,10 +24,10 @@ def getSubtitle(html):
     return subtitle
 
 def getGalleryItems(html):
-    return [(x.find("img").get("data-image-name"), x.find("img").get("src")) for x in html.find_all(class_="wikia-gallery-item")]
+    return [(x.find("img").get("data-image-name"), x.find("img").get("src").split("/revision")[0]) for x in html.find_all(class_="wikia-gallery-item")]
 
 def getProfileItems(html):
-    return [(x.find("img").get("data-image-name"), x.find("img").get("src")) for x in html.find_all(class_="wds-tab__content")]
+    return [(x.find("img").get("data-image-name"), x.find("img").get("src").split("/revision")[0]) for x in html.find_all(class_="wds-tab__content")]
 
 def cleanText(txt):
     return txt.replace('\t', '').replace('\n', '').replace('\r', '')
